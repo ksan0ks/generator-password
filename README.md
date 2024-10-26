@@ -1,8 +1,8 @@
 <div align = "center">
   <img alt="Logo" src="data/password-generator-banner_1.png">
   <hr>
-  <img alt="GitHub License" src="https://img.shields.io/github/license/ksan0ks/password-generator?style=for-the-badge&logo=github&labelColor=444&color=333">
-  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/ksan0ks/password-generator?style=for-the-badge&logo=github&labelColor=444&color=333">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/ksan0ks/generator-password?style=for-the-badge&logo=github&labelColor=444&color=333">
+  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/ksan0ks/generator-password?style=for-the-badge&logo=github&labelColor=444&color=333">
 </div>
 <div align="left">
   <h1>Технологии:</h1>
