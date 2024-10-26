@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="be">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../resources/css/index.css"/>
+    <style>
+      body {
+          font-family: 'Noto Sans';
+          margin: 1rem;
+      }
+      label {
+          font-weight: 500
+      }
+      .pass-param {
+          display: flex;
+          justify-content: flex-star;
+          flex-direction: column;
+          padding-bottom: 4.2rem
+      }
+      .pass-param button {
+          margin-top: 2.1rem
+      }
+      .generator-pass-output-text-copy button {
+          margin-top: 2.4rem
+      }
+      input {
+          word-break: break-word;
+          margin-top: -0.4rem
+      }
+    </style>
+    <title>Стварыць пароль</title>
+  </head>
+  <body>
+    <main>
+      <selection class="main-selection">
+        <div class="main-block-title">
+          <h1>Стварыць пароль</h1>
+        </div>
+      </selection>
+        <div class="main-block-generator-param">
+          <label>Даўжыня пароля:
+            <input type="range" id="pass-length" value="4" min="4" max="64" />
+            <p><span id="pass-length-value">4</span><span id="pass-length-symbol-text"> сімвала</span></p>
+          </label>
+        </div>
+        <div class="pass-param">
+          <label>
+            <input type="checkbox" id="pass-param-word-caps" checked>Вялікія літары (A-Z)
+          </label>
+          <label>
+            <input type="checkbox" id="pass-param-symbol" checked>Спецыяльныя знакі (!&*)
+          </label>
+          <label>
+            <input type="checkbox" id="pass-param-number" checked>Уключыце лічбы (0-9)
+          </label>
+          <button onclick="PassGen()">Стварыць пароль</button>
+        </div>
+        <div class="generator-pass-output">
+          <div class="generator-pass-output-text-copy">
+            <p>Пароль:</p>
+            <input type="text" id="password" readonly />
+            <button onclick="copyPass()" class="--kn-button-float-right">Копія</button>
+            <div class="password-strength" id="strength"></div>
+            <div class="notify"></div>
+          </div>
+        </div>
+    </main>
+    <script>
+    const length = document.getElementById('pass-length');
+    const passvalue = document.getElementById('pass-length-value');
+    const symboltext = document.getElementById('pass-length-symbol-text');
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const symbols = "!@#$%^&*?";
+    const uppercase = lowercase.toUpperCase();
+    
+    function PassGen() {
+      const paramNumber = document.getElementById('pass-param-number').checked;
+      const paramSymbol = document.getElementById('pass-param-symbol').checked;
+      const paramWord = document.getElementById('pass-param-word-caps').checked;
+    
+      let characterPool = lowercase;
+    
+      if (paramNumber) characterPool += numbers;
+      if (paramSymbol) characterPool += symbols;
+      if (paramWord) characterPool += uppercase;
+    
+      let password = "";
+      for (let i = 0; i < length.value; i++) {
+        const randomIndex = Math.floor(Math.random() * characterPool.length);
+        password += characterPool[randomIndex];
+      }
+      document.getElementById("password").value = password;
+      checkPasswordStrength(password);
+    }
+    
+    function checkPasswordStrength(password) {
+      const strengthIndicator = document.getElementById("strength");
+      let strength = 0;
+    
+      if (/[a-z]/.test(password)) strength++;
+      if (/[A-Z]/.test(password)) strength++;
+      if (/\d/.test(password)) strength++;
+      if (/[^a-zA-Z0-9]/.test(password)) strength++;
+    
+      if (password.length >= 12) strength++; 
+    
+      if (strength <= 2) {
+        strengthIndicator.textContent = "Уразлівы";
+        strengthIndicator.className = "password-strength vulnerable";
+      } else if (strength === 3) {
+        strengthIndicator.textContent = "Слабы";
+        strengthIndicator.className = "password-strength weak";
+      } else {
+        strengthIndicator.textContent = "Надзейны";
+        strengthIndicator.className = "password-strength strong";
+      }
+    }
+    
+    function copyPass() {
+      const passwordField = document.getElementById("password");
+      passwordField.select();
+      document.execCommand("copy");
+      document.getElementsByClassName('notify').textContent = 'Пароль захаваны.';
+    }
+    
+    function getWordForm(number) {
+      const lastDigit = number % 10;
+      const lastTwoDigits = number % 100;
+    
+      if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+        return " symbols";
+      } else if (lastDigit === 1) {
+        return " symbol";
+      } else if (lastDigit >= 2 && lastDigit <= 4) {
+        return " symbol";
+      } else {
+        return " symbols";
+      }
+    }
+    
+    length.addEventListener('input', () => {
+      passvalue.textContent = length.value;
+      symboltext.textContent = getWordForm(length.value)
+    });
+ </script>
+  </body>
+</html>

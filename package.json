@@ -1,0 +1,26 @@
+{
+  "name": "generator-pass",
+  "version": "2.6.0",
+  "private": false,
+  "homepage": "https://github.com/ksan0ks/qr-code#readme",
+  "bugs": {
+    "url": "https://github.com/ksan0ks/qr-code/issues",
+    "email": "support.generic591@aleeas.com"
+  },
+  "author": {
+    "name": "ksan0ks",
+    "url": "https://github.com/ksan0ks",
+    "email": "support.generic591@aleeas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksan0ks/qr-code.git"
+  }
+  "main": "language-redirect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "description": ""
+}

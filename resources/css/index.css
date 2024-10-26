@@ -1,0 +1,376 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.light {
+  --kn-sys-color-primary: rgb(0 93 43);
+  --kn-sys-color-surface-tint: rgb(22 108 55);
+  --kn-sys-color-on-primary: rgb(255 255 255);
+  --kn-sys-color-primary-container: rgb(51 132 76);
+  --kn-sys-color-on-primary-container: rgb(255 255 255);
+  --kn-sys-color-secondary: rgb(71 101 76);
+  --kn-sys-color-on-secondary: rgb(255 255 255);
+  --kn-sys-color-secondary-container: rgb(203 237 205);
+  --kn-sys-color-on-secondary-container: rgb(50 80 56);
+  --kn-sys-color-tertiary: rgb(0 83 139);
+  --kn-sys-color-on-tertiary: rgb(255 255 255);
+  --kn-sys-color-tertiary-container: rgb(52 120 183);
+  --kn-sys-color-on-tertiary-container: rgb(255 255 255);
+  --kn-sys-color-error: rgb(186 26 26);
+  --kn-sys-color-on-error: rgb(255 255 255);
+  --kn-sys-color-error-container: rgb(255 218 214);
+  --kn-sys-color-on-error-container: rgb(65 0 2);
+  --kn-sys-color-background: rgb(247 251 243);
+  --kn-sys-color-on-background: rgb(24 29 24);
+  --kn-sys-color-surface: rgb(247 251 243);
+  --kn-sys-color-on-surface: rgb(24 29 24);
+  --kn-sys-color-surface-variant: rgb(219 229 216);
+  --kn-sys-color-on-surface-variant: rgb(64 73 64);
+  --kn-sys-color-outline: rgb(112 122 111);
+  --kn-sys-color-outline-variant: rgb(191 201 189);
+  --kn-sys-color-shadow: rgb(0 0 0);
+  --kn-sys-color-scrim: rgb(0 0 0);
+  --kn-sys-color-inverse-surface: rgb(45 50 45);
+  --kn-sys-color-inverse-on-surface: rgb(238 242 234);
+  --kn-sys-color-inverse-primary: rgb(134 216 152);
+  --kn-sys-color-primary-fixed: rgb(162 245 178);
+  --kn-sys-color-on-primary-fixed: rgb(0 33 11);
+  --kn-sys-color-primary-fixed-dim: rgb(134 216 152);
+  --kn-sys-color-on-primary-fixed-variant: rgb(0 82 38);
+  --kn-sys-color-secondary-fixed: rgb(201 235 203);
+  --kn-sys-color-on-secondary-fixed: rgb(4 33 13);
+  --kn-sys-color-secondary-fixed-dim: rgb(173 207 176);
+  --kn-sys-color-on-secondary-fixed-variant: rgb(48 77 54);
+  --kn-sys-color-tertiary-fixed: rgb(209 228 255);
+  --kn-sys-color-on-tertiary-fixed: rgb(0 29 53);
+  --kn-sys-color-tertiary-fixed-dim: rgb(157 202 255);
+  --kn-sys-color-on-tertiary-fixed-variant: rgb(0 73 123);
+  --kn-sys-color-surface-dim: rgb(215 219 212);
+  --kn-sys-color-surface-bright: rgb(247 251 243);
+  --kn-sys-color-surface-container-lowest: rgb(255 255 255);
+  --kn-sys-color-surface-container-low: rgb(241 245 237);
+  --kn-sys-color-surface-container: rgb(235 239 231);
+  --kn-sys-color-surface-container-high: rgb(229 233 226);
+  --kn-sys-color-surface-container-highest: rgb(224 228 220);
+}
+
+.dark {
+  --kn-sys-color-primary: rgb(134 216 152);
+  --kn-sys-color-surface-tint: rgb(134 216 152);
+  --kn-sys-color-on-primary: rgb(0 57 24);
+  --kn-sys-color-primary-container: rgb(51 132 76);
+  --kn-sys-color-on-primary-container: rgb(255 255 255);
+  --kn-sys-color-secondary: rgb(173 207 176);
+  --kn-sys-color-on-secondary: rgb(26 54 33);
+  --kn-sys-color-secondary-container: rgb(41 70 47);
+  --kn-sys-color-on-secondary-container: rgb(187 221 189);
+  --kn-sys-color-tertiary: rgb(157 202 255);
+  --kn-sys-color-on-tertiary: rgb(0 50 87);
+  --kn-sys-color-tertiary-container: rgb(52 120 183);
+  --kn-sys-color-on-tertiary-container: rgb(255 255 255);
+  --kn-sys-color-error: rgb(255 180 171);
+  --kn-sys-color-on-error: rgb(105 0 5);
+  --kn-sys-color-error-container: rgb(147 0 10);
+  --kn-sys-color-on-error-container: rgb(255 218 214);
+  --kn-sys-color-background: rgb(16 20 16);
+  --kn-sys-color-on-background: rgb(224 228 220);
+  --kn-sys-color-surface: rgb(16 20 16);
+  --kn-sys-color-on-surface: rgb(224 228 220);
+  --kn-sys-color-surface-variant: rgb(64 73 64);
+  --kn-sys-color-on-surface-variant: rgb(191 201 189);
+  --kn-sys-color-outline: rgb(137 147 136);
+  --kn-sys-color-outline-variant: rgb(64 73 64);
+  --kn-sys-color-shadow: rgb(0 0 0);
+  --kn-sys-color-scrim: rgb(0 0 0);
+  --kn-sys-color-inverse-surface: rgb(224 228 220);
+  --kn-sys-color-inverse-on-surface: rgb(45 50 45);
+  --kn-sys-color-inverse-primary: rgb(22 108 55);
+  --kn-sys-color-primary-fixed: rgb(162 245 178);
+  --kn-sys-color-on-primary-fixed: rgb(0 33 11);
+  --kn-sys-color-primary-fixed-dim: rgb(134 216 152);
+  --kn-sys-color-on-primary-fixed-variant: rgb(0 82 38);
+  --kn-sys-color-secondary-fixed: rgb(201 235 203);
+  --kn-sys-color-on-secondary-fixed: rgb(4 33 13);
+  --kn-sys-color-secondary-fixed-dim: rgb(173 207 176);
+  --kn-sys-color-on-secondary-fixed-variant: rgb(48 77 54);
+  --kn-sys-color-tertiary-fixed: rgb(209 228 255);
+  --kn-sys-color-on-tertiary-fixed: rgb(0 29 53);
+  --kn-sys-color-tertiary-fixed-dim: rgb(157 202 255);
+  --kn-sys-color-on-tertiary-fixed-variant: rgb(0 73 123);
+  --kn-sys-color-surface-dim: rgb(16 20 16);
+  --kn-sys-color-surface-bright: rgb(54 58 53);
+  --kn-sys-color-surface-container-lowest: rgb(11 15 11);
+  --kn-sys-color-surface-container-low: rgb(24 29 24);
+  --kn-sys-color-surface-container: rgb(28 33 28);
+  --kn-sys-color-surface-container-high: rgb(38 43 38);
+  --kn-sys-color-surface-container-highest: rgb(49 54 49);
+}
+
+//*
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+*/
+.noto-sans-default {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+html {
+    font-family: 'Noto Sans', Sans-Serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 26px
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500
+}
+
+a {
+    background-color: none;
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    outline: none;
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+button,input,optgroup,select,textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+button {
+    overflow: visible
+}
+
+button,select {
+    text-transform: none
+}
+
+button,html input[type=button],input[type=reset],input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],html input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner,input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input {
+    line-height: normal;
+    background-color: #222;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+input[type=checkbox] {
+    background-color: rgb(51 132 76);
+    color: rgb(51 132 76);
+}
+
+input[type=range] {
+    background: rgb(51 132 76);
+}
+
+input[type=text] {
+    min-height: 2.3666rem;
+    width: 98.7444%;
+    color: rgb(241,241,241);
+    border-style: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+abbr,acronym,blockquote,code,input,kbd,q,samp,var {
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle
+}
+
+dl,ol,ul {
+    list-style-position: outside;
+    margin-bottom: 20px
+}
+
+ol,ul {
+    margin-left: 20px
+}
+
+ol li ol,ol li ul,ul li ol,ul li ul {
+    margin-bottom: 0;
+    margin-left: 20px
+}
+
+body {
+    background-color: #111;
+    color: rgb(241,241,241);
+    cursor: auto;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.444;
+    margin: 0;
+    overflow-wrap: break-word;
+    padding: 0;
+    word-wrap: break-word
+}
+
+body::after {
+    content: "sm";
+    display: none
+}
+
+@media (min-width: 600px) {
+    body::after {
+        content:"kn"
+    }
+}
+
+@media (min-width: 1024px) {
+    body::after {
+        content:"lg"
+    }
+}
+
+@media (min-width: 1440px) {
+    body::after {
+        content:"xl"
+    }
+}
+
+@media (min-width: 600px) {
+    p {
+        line-height:1.5;
+        font-size: 16px;
+        letter-spacing: .25px
+    }
+}
+
+hr {
+    border: solid var(--kn-sys-color-tertiary);
+    border-width: 2px 0 0;
+    clear: both;
+    height: 0;
+    margin-bottom: 19px;
+    margin-top: 20px
+}
+
+button {
+    font-family: 'Calibri bold',Arial,Helvetica;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    font-family: 'Calibri Bold',Arial,Helvetica;
+    font-size: 17px;
+    font-weight: 500;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    letter-spacing: .5px;
+    line-height: 24px;
+    margin: 5px 0;
+    max-width: 380px;
+    min-height: 48px;
+    min-width: 96px;
+    overflow: hidden;
+    padding: 10px 24px 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: background-color .2s,color .2s,-webkit-box-shadow .2s;
+    transition: background-color .2s,color .2s,-webkit-box-shadow .2s;
+    -o-transition: background-color .2s,box-shadow .2s,color .2s;
+    transition: background-color .2s,box-shadow .2s,color .2s;
+    transition: background-color .2s,box-shadow .2s,color .2s,-webkit-box-shadow .2s;
+    vertical-align: middle
+}
+
+button {
+   background-color: rgb(34,34,34);
+   color: rgb(241,241,241);
+}
+
+button.--kn-button-float-left {
+    float: left;
+}
+
+button.--kn-button-float-right {
+    float: right;
+}
+
+button.--kn-button-float-center {
+    float: center;
+}
+
+button.--kn-button-color-tertiary-container {
+    background-color: var(--kn-sys-color-tertiary-container);
+    color: rgb(247 251 243)
+}
+
+button:focus, button::-moz-focus-inner {
+    outline: 0;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none
+}
+
+.vulnerable { 
+    color: rgb(186 26 26);
+}
+.weak { 
+    color: orange; 
+}
+.strong { 
+    color: green;
+}
+.password-strength { font-weight: bold; }
