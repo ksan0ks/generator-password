@@ -1,6 +1,6 @@
 const userLang = navigator.language || navigator.userLanguage;
 const defaultLang = 'en';
-const supportedLanguages = ['ua', 'ru', 'en', 'be', 'es', 'it', 'ja', 'ko', 'sv', 'th', 'zh'];
+const supportedLanguages = ['ua', 'ru', 'en', 'be', 'es', 'it', 'ja', 'ko', 'ch', 'th', 'zh'];
 const redirectFlagKey = 'initialRedirect';
 
 let redirectLang = getSavedLanguage() || userLang.substr(0, 2).toLowerCase();
@@ -42,8 +42,8 @@ if (!localStorage.getItem(redirectFlagKey)) {
     case 'ru':
       redirectLang = 'ru';
       break;
-    case 'sv':
-      redirectLang = 'sv';
+    case 'ch':
+      redirectLang = 'ch';
       break;
     case 'ko':
       redirectLang = 'ko';

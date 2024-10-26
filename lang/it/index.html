@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="be">
+<html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,38 +29,38 @@
           margin-top: -0.4rem
       }
     </style>
-    <title>Стварыць пароль</title>
+    <title>Generate password</title>
   </head>
   <body>
     <main>
       <selection class="main-selection">
         <div class="main-block-title">
-          <h1>Стварыць пароль</h1>
+          <h1>Generate password</h1>
         </div>
       </selection>
         <div class="main-block-generator-param">
-          <label>Даўжыня пароля:
+          <label>Password length:
             <input type="range" id="pass-length" value="4" min="4" max="64" />
-            <p><span id="pass-length-value">4</span><span id="pass-length-symbol-text"> сімвала</span></p>
+            <p><span id="pass-length-value">4</span><span id="pass-length-symbol-text"> symbol</span></p>
           </label>
         </div>
         <div class="pass-param">
           <label>
-            <input type="checkbox" id="pass-param-word-caps" checked>Вялікія літары (A-Z)
+            <input type="checkbox" id="pass-param-word-caps" checked>Capital letters (A-Z)
           </label>
           <label>
-            <input type="checkbox" id="pass-param-symbol" checked>Спецыяльныя знакі (!&*)
+            <input type="checkbox" id="pass-param-symbol" checked>Special characters (!&*)
           </label>
           <label>
-            <input type="checkbox" id="pass-param-number" checked>Уключыце лічбы (0-9)
+            <input type="checkbox" id="pass-param-number" checked>Include numbers (0-9)
           </label>
-          <button onclick="PassGen()">Стварыць пароль</button>
+          <button onclick="PassGen()">Generate password</button>
         </div>
         <div class="generator-pass-output">
           <div class="generator-pass-output-text-copy">
-            <p>Пароль:</p>
+            <p>Password:</p>
             <input type="text" id="password" readonly />
-            <button onclick="copyPass()" class="--kn-button-float-right">Копія</button>
+            <button onclick="copyPass()" class="--kn-button-float-right">Copy</button>
             <div class="password-strength" id="strength"></div>
             <div class="notify"></div>
           </div>
@@ -107,13 +107,13 @@
       if (password.length >= 12) strength++; 
     
       if (strength <= 2) {
-        strengthIndicator.textContent = "Уразлівы";
+        strengthIndicator.textContent = "Vulnerable";
         strengthIndicator.className = "password-strength vulnerable";
       } else if (strength === 3) {
-        strengthIndicator.textContent = "Слабы";
+        strengthIndicator.textContent = "Weak";
         strengthIndicator.className = "password-strength weak";
       } else {
-        strengthIndicator.textContent = "Надзейны";
+        strengthIndicator.textContent = "Reliable";
         strengthIndicator.className = "password-strength strong";
       }
     }
@@ -122,7 +122,7 @@
       const passwordField = document.getElementById("password");
       passwordField.select();
       document.execCommand("copy");
-      document.getElementsByClassName('notify').textContent = 'Пароль захаваны.';
+      document.getElementsByClassName('notify').textContent = 'Password saved.';
     }
     
     function getWordForm(number) {
